@@ -1,0 +1,72 @@
+.container {
+  position: relative;
+}
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  margin-bottom: auto;
+}
+.coverImg {
+  width: 100%;
+  height:68%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.avatarBox {
+  position: absolute;
+  margin-left: 20px;
+  bottom: 0;
+  left: 20;
+  display: flex;
+  align-items: flex-end;
+}
+.avatarBox img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-right: -75px;
+}
+.detailsContainer{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  bottom: 0;
+
+}
+.name{
+  position: absolute;
+  bottom: 0 ;
+  margin-left: 150px; 
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #000;
+}
+.name h1{
+  margin-top: auto;
+}
+.name p{
+  margin-top: auto;
+
+}
+
+.contact{
+  background-color: white;
+  flex-direction: column;
+  padding: 20px;
+  margin-top:auto;
+  text-align: left;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: rgb(228, 236, 244);
+
+}
+.contact div{
+  margin-bottom: 10px;
+  
+
+}
