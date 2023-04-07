@@ -6,18 +6,14 @@ function UserDetails({ userData }) {
   console.log("userDetailsPage");
   const router = useRouter();
   const userId = router.query.userId;
-  console.log(userId);
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <section>
       <UserInfo
-        // id={userData.id}
-        // name={userData.name}
-        // username={userData.username}
-        // email={userData.email}
-        // company={userData.company.name}
-        // address={userData.address.city}
-        // phone={userData.phone}
-        // website={userData.website}
         data={userData}
       />
     </section>
@@ -27,7 +23,6 @@ function UserDetails({ userData }) {
 export async function getStaticPaths() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const usersData = await response.json();
-  console.log(usersData);
 
   return {
     fallback: "blocking",
@@ -43,7 +38,9 @@ export async function getStaticProps(context) {
 
   const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
   if(!response.ok){
-    throw new Error("Failed to fetch data from API");
+    return {
+      notFound: true
+    };     
   }
   const selectedUser = await response.json();
 

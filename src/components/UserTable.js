@@ -95,6 +95,7 @@ function UserTable({ columns, rows }) {
                   tabIndex={-1}
                   key={row.id}
                   onClick={() => handleRowClick(row)}
+                  
                 >
                   {columns.map((column) => {
                     const value = row[column.id];

@@ -1,0 +1,32 @@
+.container {
+  min-height: 80vh;
+  position: relative;
+  align-items: center;
+  margin: 5rem auto;
+  text-align: center;
+
+}
+.homeLink {
+  text-decoration: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.h1 {
+  font-size: 15vmin;
+  color: #0d2a3a;
+
+}
+
+h2.h2 {
+  color: #1e1f1f;
+  margin: 1rem 0 2rem;
+}
+
+.button {
+  background-color: #cc8c5b !important;
+
+}
